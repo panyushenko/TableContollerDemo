@@ -12,19 +12,33 @@
         <!--Table View Controller-->
         <scene sceneID="ZAN-EO-W1g">
             <objects>
-                <tableViewController id="MjB-cp-3Gf" sceneMemberID="viewController">
+                <tableViewController id="MjB-cp-3Gf" customClass="TableViewController" customModule="TableContollerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9pU-Bs-TWq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AHY-9x-Mk0">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellTree" rowHeight="102" id="AHY-9x-Mk0" customClass="TableViewCell" customModule="TableContollerDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AHY-9x-Mk0" id="boZ-cD-RUJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j8a-zp-Sid">
+                                            <rect key="frame" x="143" y="9" width="89" height="83"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="j8a-zp-Sid" secondAttribute="bottom" constant="9.5" id="GRf-T3-X9d"/>
+                                        <constraint firstItem="j8a-zp-Sid" firstAttribute="top" secondItem="boZ-cD-RUJ" secondAttribute="top" constant="9" id="PhT-hi-jgA"/>
+                                        <constraint firstAttribute="trailing" secondItem="j8a-zp-Sid" secondAttribute="trailing" constant="143" id="eo2-GQ-NhP"/>
+                                        <constraint firstItem="j8a-zp-Sid" firstAttribute="leading" secondItem="boZ-cD-RUJ" secondAttribute="leading" constant="143" id="lyy-Ov-7Cn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageTreeCell" destination="j8a-zp-Sid" id="mJ1-Zq-Kr9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,7 +49,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="StH-Tw-LrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="80"/>
+            <point key="canvasLocation" x="117.59999999999999" y="79.610194902548727"/>
         </scene>
     </scenes>
 </document>
