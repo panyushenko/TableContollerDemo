@@ -25,7 +25,7 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,16 +39,23 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let allTree = "tree\(indexPath.row + 1)"
-        //let cellCustom = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath) as! TableViewCell
-        let cellDefault = UITableViewCell(style: .default, reuseIdentifier: "defaultIdCell")
         //let someTree = allTrees[indexPath.row]
         //cell.imageTreeCell?.image = someTree
-//        cellCustom.imageTreeCell.image = UIImage(named: allTree)
-//        cellCustom.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
         
-        cellDefault.imageView?.image = UIImage(named: allTree)
-        //cellDefault.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
-    
-        return cellDefault
+        let cellDefault = UITableViewCell(style: .default, reuseIdentifier: "defaultIdCell")
+        let cellCustom = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath) as! TableViewCell
+        
+        if indexPath.section == 0 {
+            cellDefault.imageView?.image = UIImage(named: allTree)
+            cellDefault.textLabel?.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
+            return cellDefault
+        } else {
+            cellCustom.imageTreeCell.image = UIImage(named: allTree)
+            if cellCustom.lableCustomCell.text == "Label"{
+                cellCustom.lableCustomCell.text = "Row \(indexPath.row)"
+            }
+            //cellCustom.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
+            return cellCustom
+        }
     }
 }
