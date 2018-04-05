@@ -14,6 +14,8 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "XIBTableViewCell", bundle: nil), forCellReuseIdentifier: "XIBTreeCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +27,7 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,23 +41,31 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let allTree = "tree\(indexPath.row + 1)"
-        //let someTree = allTrees[indexPath.row]
-        //cell.imageTreeCell?.image = someTree
-        
-        let cellDefault = UITableViewCell(style: .default, reuseIdentifier: "defaultIdCell")
-        let cellCustom = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath) as! TableViewCell
-        
-        if indexPath.section == 0 {
-            cellDefault.imageView?.image = UIImage(named: allTree)
-            cellDefault.textLabel?.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
-            return cellDefault
-        } else {
-            cellCustom.imageTreeCell.image = UIImage(named: allTree)
-            if cellCustom.lableCustomCell.text == "Label"{
-                cellCustom.lableCustomCell.text = "Row \(indexPath.row)"
-            }
-            //cellCustom.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
-            return cellCustom
+//        //let someTree = allTrees[indexPath.row]
+//        //cell.imageTreeCell?.image = someTree
+//
+//        let cellDefault = UITableViewCell(style: .default, reuseIdentifier: "defaultIdCell")
+//        let cellCustom = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath) as! TableViewCell
+//
+//        if indexPath.section == 0 {
+//            cellDefault.imageView?.image = UIImage(named: allTree)
+//            cellDefault.textLabel?.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
+//            return cellDefault
+//        } else {
+//            cellCustom.imageTreeCell.image = UIImage(named: allTree)
+//            if cellCustom.lableCustomCell.text == "Label"{
+//                cellCustom.lableCustomCell.text = "Row \(indexPath.row)"
+//            }
+//            //cellCustom.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
+//            return cellCustom
+//        }
+        let cellXIB = tableView.dequeueReusableCell(withIdentifier: "XIBTreeCell", for: indexPath) as! XIBTableViewCell
+        cellXIB.imageViewXIB.image = UIImage(named: allTree)
+        if cellXIB.firstLabelXIB.text == "Label" {
+            cellXIB.firstLabelXIB.text = "\(indexPath.row)"
         }
+        cellXIB.secondLabelXIB.text = allTree
+        
+        return cellXIB
     }
 }
