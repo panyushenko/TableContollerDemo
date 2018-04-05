@@ -39,12 +39,16 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let allTree = "tree\(indexPath.row + 1)"
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath) as! TableViewCell
+        //let cellCustom = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath) as! TableViewCell
+        let cellDefault = UITableViewCell(style: .default, reuseIdentifier: "defaultIdCell")
         //let someTree = allTrees[indexPath.row]
         //cell.imageTreeCell?.image = someTree
-        cell.imageTreeCell.image = UIImage(named: allTree)
-        cell.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
+//        cellCustom.imageTreeCell.image = UIImage(named: allTree)
+//        cellCustom.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
+        
+        cellDefault.imageView?.image = UIImage(named: allTree)
+        //cellDefault.lableCustomCell.text = "Section \(indexPath.section + 1) Row \(indexPath.row + 1)"
     
-        return cell
+        return cellDefault
     }
 }
