@@ -26,13 +26,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Aj-eb-VcM">
-                                            <rect key="frame" x="152" y="2" width="70" height="95"/>
+                                            <rect key="frame" x="250" y="3" width="70" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA4-MO-TkX">
+                                            <rect key="frame" x="34" y="40" width="197" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageTreeCell" destination="9Aj-eb-VcM" id="swd-So-ud8"/>
+                                    <outlet property="lableCustomCell" destination="dA4-MO-TkX" id="Is5-Ck-wsP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
