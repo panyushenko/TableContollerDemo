@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0318AD32076449700BC9742 /* Trees.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0318AD22076449700BC9742 /* Trees.xcassets */; };
 		D0CC3184206EE5D300B1CAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC3183206EE5D300B1CAD9 /* AppDelegate.swift */; };
 		D0CC3186206EE5D300B1CAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC3185206EE5D300B1CAD9 /* ViewController.swift */; };
 		D0CC3189206EE5D300B1CAD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CC3187206EE5D300B1CAD9 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0318AD22076449700BC9742 /* Trees.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Trees.xcassets; sourceTree = "<group>"; };
 		D0CC3180206EE5D300B1CAD9 /* TableContollerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableContollerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CC3183206EE5D300B1CAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0CC3185206EE5D300B1CAD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D0CC3187206EE5D300B1CAD9 /* Main.storyboard */,
 				D0CC3195206EE61800B1CAD9 /* TableViewController.swift */,
 				D0CC3197206EE62A00B1CAD9 /* TableViewCell.swift */,
+				D0318AD22076449700BC9742 /* Trees.xcassets */,
 				D0CC318A206EE5D500B1CAD9 /* Assets.xcassets */,
 				D0CC318C206EE5D500B1CAD9 /* LaunchScreen.storyboard */,
 				D0CC318F206EE5D500B1CAD9 /* Info.plist */,
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CC318E206EE5D500B1CAD9 /* LaunchScreen.storyboard in Resources */,
+				D0318AD32076449700BC9742 /* Trees.xcassets in Resources */,
 				D0CC318B206EE5D500B1CAD9 /* Assets.xcassets in Resources */,
 				D0CC3189206EE5D300B1CAD9 /* Main.storyboard in Resources */,
 			);

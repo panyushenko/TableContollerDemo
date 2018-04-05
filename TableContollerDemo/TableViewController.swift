@@ -35,9 +35,11 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let allTree = "tree\(indexPath.row + 1)"
         let cell = tableView.dequeueReusableCell(withIdentifier: "TreeCell", for: indexPath) as! TableViewCell
-        let someTree = allTrees[indexPath.row]
-        cell.imageTreeCell?.image = someTree
+        //let someTree = allTrees[indexPath.row]
+        //cell.imageTreeCell?.image = someTree
+        cell.imageTreeCell.image = UIImage(named: allTree)
     
         return cell
     }
